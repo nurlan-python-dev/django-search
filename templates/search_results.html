@@ -1,0 +1,14 @@
+<h1>Qidirish natijasi</h1>
+
+
+{% if object_list %}
+<ul>
+  {% for city in object_list %}
+    <li>
+      {{ city.country }}, {{ city.city }}, {{ city.iso }}, {{ city.time_zone }} 
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+  <p>Topilmadi</p>
+{% endif %}
